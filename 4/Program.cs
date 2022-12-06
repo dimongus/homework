@@ -5,12 +5,11 @@ Console.WriteLine(" Введите некое число");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Число N = ");
 
-if (n % 2 == 0) Console.Write($"{n} четное");
-else { Console.Write($"{n} нечетное"); }
+if (n % 2 == 0) Console.WriteLine($"{n} четное");
+else { Console.WriteLine($"{n} нечетное"); }
 
-for (int i = 0; i <=(n+1); i++)
+Console.WriteLine($"четные числа до числа {n}");
+for (int i = 2; i <= n; i = i + 2)
 {
-    if (i == n)
-        break;
     Console.WriteLine(i);
 }

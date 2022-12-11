@@ -4,7 +4,7 @@
 // 23432 -> да
 
 Console.WriteLine("Введите 5ти значное число");
-string n = (Console.ReadLine());
+string n =(Console.ReadLine());
 
 void CheckingNumber(string n){
   if (n[0]==n[4] || n[1]==n[3]){

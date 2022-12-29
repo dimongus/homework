@@ -9,14 +9,15 @@
 // int A = int.Parse(Console.ReadLine());
 // Console.WriteLine("Введите число B");
 // int B = int.Parse(Console.ReadLine());
-
+// int Answer(int A, int B)
+// {
 // int extent = A;
-
 // for (int i = 1; i < B; i++)
 // {
 // extent = extent * A;
 // }
-// Console.WriteLine("A в степени B равно: " + extent);
+// }
+
 
 // ________________________________________________________________
 
@@ -28,7 +29,7 @@
 
 // Console.WriteLine("Введите число ");
 // int n = int.Parse(Console.ReadLine());
-//   int sumN(int n)
+//   int SumN(int n)
 //   {
     
 //     int counter = Convert.ToString(n).Length;
@@ -43,7 +44,7 @@
 //    return result;
 //   }
 
-// int sumNumber = sumN(n);
+// int sumNumber = SumN(n);
 // Console.WriteLine($"Сумма цифр в числе {sumNumber}");
 
 // ____________________________________________________
@@ -56,23 +57,39 @@
 
 
 
+int n = InPut("Введите количество элементов в массиве: ");
+int m = InPut("Введите максимальное возможное значение элементов массива: ");
+Array(n, m);
 
-
-
-Console.WriteLine("Введите ряд чисел, разделенных запятой : ");
-int num = int.Parse(Console.ReadLine());
-
-int [] numbers = new int[num];
-Console.Write("[");
-
-for (int i = 0; i < numbers.Length; i++)
- {
-    numbers [i] = numbers [i]+1;
-    Console.Write(" " + Method (i) + " ");
- }
-Console.Write("]");
-
-int Method (int a)
+int InPut(string input)
 {
-    return numbers[a];
+    Console.Write(input);
+    return Convert.ToInt32(Console.ReadLine());
 }
+
+void Array(int n, int m)
+{
+    int size = n;
+    int[] a = new int[size];
+    Console.Write("[");
+    for(int i = 0; i < a.Length; i++ )
+    {
+        a[i] = new Random().Next(0, m);
+        if (i < (a.Length - 1))
+        {
+            Console.Write(a[i] + ", ");
+        }
+        else
+        {
+            Console.Write(a[i] + "]");
+        } 
+    }
+}
+
+
+
+
+
+
+
+
